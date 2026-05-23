@@ -4,9 +4,11 @@ permissions:
   contents: read
 
 on:
-  push:
-    tags:
-      - 'v*'
+  workflow_dispatch:
+  # Disabled for Torse fork — requires TWENTY_INFRA_TOKEN and twentyhq/twenty-infra
+  # push:
+  #   tags:
+  #     - 'v*'
 
 jobs:
   deploy-tag:

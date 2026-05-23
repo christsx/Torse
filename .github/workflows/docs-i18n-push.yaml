@@ -6,13 +6,14 @@ permissions:
 on:
   workflow_dispatch:
   workflow_call:
-  push:
-    branches: ['main']
-    paths:
-      - 'packages/twenty-docs/**/*.mdx'
-      - '!packages/twenty-docs/l/**'
-      - 'packages/twenty-docs/navigation/navigation.template.json'
-      - '.github/crowdin-docs.yml'
+  # Disabled for Torse fork — requires Crowdin secrets
+  # push:
+  #   branches: ['main']
+  #   paths:
+  #     - 'packages/twenty-docs/**/*.mdx'
+  #     - '!packages/twenty-docs/l/**'
+  #     - 'packages/twenty-docs/navigation/navigation.template.json'
+  #     - '.github/crowdin-docs.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
