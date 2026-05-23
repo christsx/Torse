@@ -20,61 +20,6 @@ msgstr ""
 
 #. js-lingui-explicit-id
 #: src/emails/warn-suspended-workspace.email.tsx
-msgid "If you wish to continue using Torse, please update your subscription within the next {remainingDays} {dayOrDays}."
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/emails/send-invite-link.email.tsx
-msgid "Join your team on Torse"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/emails/password-update-notify.email.tsx
-msgid "Connect to Torse"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/emails/clean-suspended-workspace.email.tsx
-msgid "If you wish to use Torse again, you can create a new workspace."
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/components/WhatIsTwenty.tsx
-msgid "What is Torse?"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/components/WhatIsTwenty.tsx
-msgid "The AI-native CRM you can customize like software."
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
-msgid "Visit Torse's website"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
-msgid "Visit Torse's GitHub repository"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
-msgid "Read Torse's user guide"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
-msgid "Visit Torse's developer documentation"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
-msgid "Torse"
-msgstr ""
-
-#. js-lingui-explicit-id
-#: src/emails/warn-suspended-workspace.email.tsx
 msgid "Suspended Workspace"
 msgstr "מרחב עבודה מושעה"
 
@@ -104,6 +49,11 @@ msgstr "המרחב ייסגר בעוד {remainingDays} {dayOrDays}, וכל הנ�
 
 #. js-lingui-explicit-id
 #: src/emails/warn-suspended-workspace.email.tsx
+msgid "If you wish to continue using Torse, please update your subscription within the next {remainingDays} {dayOrDays}."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/emails/warn-suspended-workspace.email.tsx
 msgid "Update your subscription"
 msgstr "עדכן את המנוי שלך"
 
@@ -122,6 +72,11 @@ msgstr "{senderName} (<0>{senderEmail}</0>): אנא אמת דומיין זה כ�
 #: src/emails/test.email.tsx
 msgid "Test email"
 msgstr "הודעת דוא\"ל מבחן"
+
+#. js-lingui-explicit-id
+#: src/emails/send-invite-link.email.tsx
+msgid "Join your team on Torse"
+msgstr ""
 
 #. js-lingui-explicit-id
 #: src/emails/send-invite-link.email.tsx
@@ -169,6 +124,11 @@ msgid "If you did not initiate this change, please contact your workspace owner 
 msgstr "אם לא אתה התחלת את השינוי הזה, אנא פנה מיד לבעל מרחב העבודה שלך."
 
 #. js-lingui-explicit-id
+#: src/emails/password-update-notify.email.tsx
+msgid "Connect to Torse"
+msgstr ""
+
+#. js-lingui-explicit-id
 #: src/emails/password-reset-link.email.tsx
 msgid "Reset your password 🗝"
 msgstr "אפס את הסיסמה שלך 🗝"
@@ -210,8 +170,23 @@ msgstr "כל הנתונים במרחב העבודה הזה נמחקו לצמית
 
 #. js-lingui-explicit-id
 #: src/emails/clean-suspended-workspace.email.tsx
+msgid "If you wish to use Torse again, you can create a new workspace."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/emails/clean-suspended-workspace.email.tsx
 msgid "Create a new workspace"
 msgstr "צור מרחב עבודה חדש"
+
+#. js-lingui-explicit-id
+#: src/components/WhatIsTwenty.tsx
+msgid "What is Torse?"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/WhatIsTwenty.tsx
+msgid "The AI-native CRM you can customize like software."
+msgstr ""
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx
@@ -220,8 +195,18 @@ msgstr "אתר אינטרנט"
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx
+msgid "Visit Torse's website"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
 msgid "Github"
 msgstr "Github"
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
+msgid "Visit Torse's GitHub repository"
+msgstr ""
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx
@@ -230,8 +215,23 @@ msgstr "מדריך למשתמש"
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx
+msgid "Read Torse's user guide"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
 msgid "Developers"
 msgstr "מפתחים"
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
+msgid "Visit Torse's developer documentation"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
+msgid "Torse"
+msgstr ""
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx
