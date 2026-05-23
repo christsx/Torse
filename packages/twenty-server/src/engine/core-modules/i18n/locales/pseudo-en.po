@@ -7873,9 +7873,9 @@ msgstr ""
 msgid "Wednesday"
 msgstr ""
 
-#. js-lingui-id: TVkCrJ
+#. js-lingui-id: 9aezqc
 #: src/engine/core-modules/email-verification/services/email-verification.service.ts
-msgid "Welcome to Twenty: Please Confirm Your Email"
+msgid "Welcome to Torse: Please Confirm Your Email"
 msgstr ""
 
 #. js-lingui-id: OHlJ1X

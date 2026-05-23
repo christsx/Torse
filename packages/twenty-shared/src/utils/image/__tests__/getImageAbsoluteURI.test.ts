@@ -14,6 +14,13 @@ describe('getImageAbsoluteURI', () => {
     expect(result).toBe(imageUrl);
   });
 
+  it('should return frontend static asset paths unchanged', () => {
+    const imageUrl = '/images/branding/blank-placeholder.png';
+    const baseUrl = 'http://localhost:3000';
+    const result = getImageAbsoluteURI({ imageUrl, baseUrl });
+    expect(result).toBe(imageUrl);
+  });
+
   it('should return fully formed url if imageUrl is a relative url starting with /', () => {
     const imageUrl = '/path/pic.png';
     const baseUrl = 'http://localhost:3000';

@@ -11,6 +11,7 @@ import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomState
 import { useSetAtomState } from '@/ui/utilities/state/jotai/hooks/useSetAtomState';
 
 import { Logo } from '@/auth/components/Logo';
+import { SubTitle } from '@/auth/components/SubTitle';
 import { Title } from '@/auth/components/Title';
 import { EmailVerificationSent } from '@/auth/sign-in-up/components/EmailVerificationSent';
 import { FooterNote } from '@/auth/sign-in-up/components/FooterNote';
@@ -53,12 +54,14 @@ const StandardContent = ({
   signInUpForm,
   signInUpStep,
   title,
+  subtitle,
   onClickOnLogo,
 }: {
   workspacePublicData: PublicWorkspaceData | null;
   signInUpForm: JSX.Element | null;
   signInUpStep: SignInUpStep;
   title: string;
+  subtitle?: string;
   onClickOnLogo: () => void;
 }) => {
   return (
@@ -71,6 +74,11 @@ const StandardContent = ({
         />
       </AnimatedEaseIn>
       <Title animate>{title}</Title>
+      {isDefined(subtitle) && (
+        <SubTitle>
+          <AnimatedEaseIn>{subtitle}</AnimatedEaseIn>
+        </SubTitle>
+      )}
       {signInUpForm}
       {signInUpStep === SignInUpStep.WorkspaceSelection && (
         <WorkspaceSelectionFooter />
@@ -130,7 +138,7 @@ export const SignInUp = () => {
     }
 
     if (isGlobalScope) {
-      return t`Welcome to Twenty`;
+      return t`Welcome to Torse`;
     }
 
     const workspaceName = workspacePublicData?.displayName;
@@ -148,6 +156,18 @@ export const SignInUp = () => {
     t,
     workspaceFromInviteHash?.displayName,
   ]);
+
+  const subtitle = useMemo(() => {
+    if (
+      isGlobalScope &&
+      signInUpStep === SignInUpStep.Init &&
+      !isDefined(workspaceInviteHash)
+    ) {
+      return t`The AI-native CRM you can customize like software.`;
+    }
+
+    return undefined;
+  }, [isGlobalScope, signInUpStep, workspaceInviteHash, t]);
 
   const signInUpForm = useMemo(() => {
     if (getPublicWorkspaceDataLoading || !clientConfigApiStatus.isLoadedOnce) {
@@ -221,6 +241,7 @@ export const SignInUp = () => {
       signInUpForm={signInUpForm}
       signInUpStep={signInUpStep}
       title={title}
+      subtitle={subtitle}
       onClickOnLogo={onClickOnLogo}
     />
   );

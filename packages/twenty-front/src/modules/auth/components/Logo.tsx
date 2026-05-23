@@ -6,6 +6,10 @@ import { Avatar } from 'twenty-ui/display';
 import { UndecoratedLink } from 'twenty-ui/navigation';
 import { themeCssVariables } from 'twenty-ui/theme-constants';
 import { REACT_APP_SERVER_BASE_URL } from '~/config';
+import {
+  PRODUCT_LOGO_PATH,
+  PRODUCT_NAME,
+} from '~/constants/product-branding.constants';
 import { useRedirectToDefaultDomain } from '~/modules/domain-manager/hooks/useRedirectToDefaultDomain';
 
 type LogoProps = {
@@ -19,9 +23,38 @@ const StyledContainer = styled.div`
   height: ${themeCssVariables.spacing[12]};
   margin-bottom: ${themeCssVariables.spacing[4]};
   margin-top: ${themeCssVariables.spacing[4]};
-
   position: relative;
   width: ${themeCssVariables.spacing[12]};
+`;
+
+const StyledDefaultLogoFrame = styled.div`
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+`;
+
+const StyledPrimaryLogoImage = styled.img<{ $isDefaultLogo?: boolean }>`
+  border-radius: ${({ $isDefaultLogo }) =>
+    $isDefaultLogo ? themeCssVariables.border.radius.sm : '0'};
+  display: block;
+  height: 100%;
+  object-fit: ${({ $isDefaultLogo }) => ($isDefaultLogo ? 'contain' : 'cover')};
+  object-position: center;
+  width: 100%;
+`;
+
+const StyledLogoLinkWrapper = styled.div`
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 const StyledSecondaryLogo = styled.img`
@@ -38,16 +71,9 @@ const StyledSecondaryLogoContainer = styled.div`
   display: flex;
   height: ${themeCssVariables.spacing[7]};
   justify-content: center;
-
   position: absolute;
   right: calc(-1 * ${themeCssVariables.spacing[3]});
   width: ${themeCssVariables.spacing[7]};
-`;
-
-const StyledPrimaryLogo = styled.div`
-  background-size: cover;
-  height: 100%;
-  width: 100%;
 `;
 
 export const Logo = ({
@@ -57,12 +83,14 @@ export const Logo = ({
   onClick,
 }: LogoProps) => {
   const { redirectToDefaultDomain } = useRedirectToDefaultDomain();
-  const defaultPrimaryLogoUrl = `${window.location.origin}/images/icons/android/android-launchericon-192-192.png`;
+  const isUsingDefaultLogo = !isDefined(primaryLogo);
 
-  const primaryLogoUrl = getImageAbsoluteURI({
-    imageUrl: primaryLogo ?? defaultPrimaryLogoUrl,
-    baseUrl: REACT_APP_SERVER_BASE_URL,
-  });
+  const primaryLogoUrl = isUsingDefaultLogo
+    ? PRODUCT_LOGO_PATH
+    : getImageAbsoluteURI({
+        imageUrl: primaryLogo,
+        baseUrl: REACT_APP_SERVER_BASE_URL,
+      });
 
   const secondaryLogoUrl = isNonEmptyString(secondaryLogo)
     ? getImageAbsoluteURI({
@@ -71,27 +99,40 @@ export const Logo = ({
       })
     : null;
 
-  const isUsingDefaultLogo = !isDefined(primaryLogo);
+  const primaryLogoImage = isUsingDefaultLogo ? (
+    <StyledDefaultLogoFrame>
+      <StyledPrimaryLogoImage
+        src={primaryLogoUrl}
+        alt={PRODUCT_NAME}
+        draggable={false}
+        $isDefaultLogo
+      />
+    </StyledDefaultLogoFrame>
+  ) : (
+    <StyledPrimaryLogoImage
+      src={primaryLogoUrl}
+      alt={PRODUCT_NAME}
+      draggable={false}
+    />
+  );
 
   return (
     <StyledContainer onClick={() => onClick?.()}>
       {isUsingDefaultLogo ? (
-        <UndecoratedLink
-          to={AppPath.SignInUp}
-          onClick={redirectToDefaultDomain}
-        >
-          <StyledPrimaryLogo
-            style={{ backgroundImage: `url(${primaryLogoUrl})` }}
-          />
-        </UndecoratedLink>
+        <StyledLogoLinkWrapper>
+          <UndecoratedLink
+            to={AppPath.SignInUp}
+            onClick={redirectToDefaultDomain}
+          >
+            {primaryLogoImage}
+          </UndecoratedLink>
+        </StyledLogoLinkWrapper>
       ) : (
-        <StyledPrimaryLogo
-          style={{ backgroundImage: `url(${primaryLogoUrl})` }}
-        />
+        primaryLogoImage
       )}
       {isDefined(secondaryLogoUrl) ? (
         <StyledSecondaryLogoContainer>
-          <StyledSecondaryLogo src={secondaryLogoUrl} />
+          <StyledSecondaryLogo src={secondaryLogoUrl} alt="" />
         </StyledSecondaryLogoContainer>
       ) : (
         isDefined(placeholder) && (

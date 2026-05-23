@@ -2872,10 +2872,10 @@ msgstr ""
 msgid "by {author}"
 msgstr "由 {author}"
 
-#. js-lingui-id: 8Pfllj
+#. js-lingui-id: ntUPbd
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
-msgid "By using Twenty, you agree to the"
-msgstr "使用 Twenty 即表示您同意"
+msgid "By using Torse, you agree to the"
+msgstr ""
 
 #. js-lingui-id: Yx41df
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
@@ -3279,10 +3279,10 @@ msgstr "檢查您的電子郵件"
 msgid "Check your inbox to verify your new email address."
 msgstr "請檢查您的收件匣以驗證新的電子郵件地址。"
 
-#. js-lingui-id: SxwQE8
+#. js-lingui-id: zfWTf6
 #: src/modules/settings/billing/hooks/useHandleCheckoutSession.ts
-msgid "Checkout session error. Please retry or contact Twenty team"
-msgstr "結賬會話錯誤。請重試或聯繫 Twenty 團隊"
+msgid "Checkout session error. Please retry or contact Torse team"
+msgstr ""
 
 #. js-lingui-id: SviKkE
 #: src/pages/settings/profile/appearance/components/LocalePicker.tsx
@@ -6557,10 +6557,10 @@ msgstr "取消時間間隔切換時出現錯誤。"
 msgid "Error while cancelling plan switching."
 msgstr "取消方案切換時出現錯誤。"
 
-#. js-lingui-id: QmR+2U
+#. js-lingui-id: 8VHjh7
 #: src/modules/settings/billing/hooks/useEndSubscriptionTrialPeriod.ts
-msgid "Error while ending trial period. Please contact Twenty team."
-msgstr "結束試用期時發生錯誤。請聯繫Twenty團隊。"
+msgid "Error while ending trial period. Please contact Torse team."
+msgstr ""
 
 #. js-lingui-id: 5g78zo
 #: src/pages/settings/members/SettingsWorkspaceMember.tsx
@@ -11756,10 +11756,10 @@ msgstr ""
 msgid "Page Name"
 msgstr "頁面名稱"
 
-#. js-lingui-id: NRvxzv
+#. js-lingui-id: Nm2nCb
 #: src/pages/not-found/NotFound.tsx
-msgid "Page Not Found | Twenty"
-msgstr "找不到頁面 | Twenty"
+msgid "Page Not Found | Torse"
+msgstr ""
 
 #. js-lingui-id: sF+Xp9
 #: src/pages/settings/security/event-logs/components/EventLogTableSelector.tsx
@@ -14930,10 +14930,10 @@ msgstr "與 Google 同步"
 msgid "Sync with Outlook"
 msgstr "與 Outlook 同步"
 
-#. js-lingui-id: +9x4tK
+#. js-lingui-id: uOpwU9
 #: src/pages/onboarding/SyncEmails.tsx
-msgid "Sync your Emails and Calendar with Twenty. Choose your privacy settings."
-msgstr "將您的電子郵件與行事曆與 Twenty 同步。選擇您的隱私設定。"
+msgid "Sync your Emails and Calendar with Torse. Choose your privacy settings."
+msgstr ""
 
 #. js-lingui-id: N2FcBE
 #: src/modules/settings/accounts/components/SettingsAccountsConnectedAccountsRowRightContainer.tsx
@@ -15126,6 +15126,11 @@ msgstr "文本已複製到剪貼板"
 msgid "Text Editor"
 msgstr "文本編輯器"
 
+#. js-lingui-id: Drb6pP
+#: src/pages/auth/SignInUp.tsx
+msgid "The AI-native CRM you can customize like software."
+msgstr ""
+
 #. js-lingui-id: oVH0Mt
 #: src/pages/settings/admin-panel/SettingsAdminNewAiProvider.tsx
 msgid "The API endpoint for your OpenAI-compatible provider"
@@ -15136,14 +15141,14 @@ msgstr "適用於您的 OpenAI 相容供應商的 API 端點"
 msgid "The AWS region for Bedrock"
 msgstr "Bedrock 的 AWS 區域"
 
-#. js-lingui-id: HP7per
+#. js-lingui-id: 4V6DZS
 #: src/pages/settings/applications/utils/getStandardApplicationDescription.ts
 msgid ""
-"The base data model every Twenty workspace runs on.\n"
+"The base data model every Torse workspace runs on.\n"
 "\n"
 "#### What \"foundation\" means\n"
 "\n"
-"Every Twenty workspace starts with this set of objects. They define the shape of your CRM, including relationships, activity, and reporting. Everything else, including marketplace apps, AI agents, and custom objects, plugs into them.\n"
+"Every Torse workspace starts with this set of objects. They define the shape of your CRM, including relationships, activity, and reporting. Everything else, including marketplace apps, AI agents, and custom objects, plugs into them.\n"
 "\n"
 "#### Included objects\n"
 "- **People & Companies**: contact and account records\n"
@@ -15151,20 +15156,20 @@ msgid ""
 "- **Notes & Tasks**: activity and follow-ups\n"
 "- **Workflows & Dashboards**: automation and reporting\n"
 "\n"
-"Remove this app and the rest of Twenty has nothing to hang off.\n"
+"Remove this app and the rest of Torse has nothing to hang off.\n"
 "\n"
 "#### Build your own app\n"
 "\n"
-"Extend Twenty with your own objects, fields, logic functions, or AI skills. Scaffold a new app in one command:\n"
+"Extend Torse with your own objects, fields, logic functions, or AI skills. Scaffold a new app in one command:\n"
 "\n"
 "```bash\n"
-"npx create-twenty-app@latest my-twenty-app\n"
+"npx create-twenty-app@latest my-torse-app\n"
 "```\n"
 "\n"
 "Then inside the folder:\n"
 "\n"
 "```bash\n"
-"cd my-twenty-app\n"
+"cd my-torse-app\n"
 "yarn twenty dev\n"
 "```\n"
 "\n"
@@ -15773,6 +15778,11 @@ msgstr ""
 msgid "Top Workspaces"
 msgstr ""
 
+#. js-lingui-id: jALvYD
+#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
+msgid "Torse fields"
+msgstr ""
+
 #. js-lingui-id: 72c5Qo
 #: src/modules/page-layout/widgets/graph/graph-widget-pie-chart/hooks/usePieChartCenterMetricData.ts
 msgid "Total"
@@ -15963,11 +15973,6 @@ msgstr ""
 #: src/modules/settings/data-model/fields/forms/select/components/SettingsDataModelFieldSelectFormOptionRow.tsx
 msgid "Turquoise"
 msgstr "綠松石色"
-
-#. js-lingui-id: JnaRPe
-#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
-msgid "Twenty fields"
-msgstr "Twenty 欄位"
 
 #. js-lingui-id: YIjS4q
 #: src/modules/ai/components/SettingsAgentModelCapabilities.tsx
@@ -17138,10 +17143,10 @@ msgstr ""
 msgid "Weight"
 msgstr ""
 
-#. js-lingui-id: nTuObL
+#. js-lingui-id: aabRQ3
 #: src/pages/auth/SignInUp.tsx
-msgid "Welcome to Twenty"
-msgstr "歡迎來到 Twenty"
+msgid "Welcome to Torse"
+msgstr ""
 
 #. js-lingui-id: t8ZvkC
 #: src/pages/auth/SignInUp.tsx

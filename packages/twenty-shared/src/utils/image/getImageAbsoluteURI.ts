@@ -11,6 +11,10 @@ export const getImageAbsoluteURI = ({
     return imageUrl;
   }
 
+  if (imageUrl.startsWith('/images/')) {
+    return imageUrl;
+  }
+
   if (imageUrl.startsWith('/')) {
     return new URL(`/files${imageUrl}`, baseUrl).toString();
   }

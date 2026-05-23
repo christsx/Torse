@@ -7878,10 +7878,10 @@ msgstr "Webhaak nie gevind nie."
 msgid "Wednesday"
 msgstr "Woensdag"
 
-#. js-lingui-id: TVkCrJ
+#. js-lingui-id: 9aezqc
 #: src/engine/core-modules/email-verification/services/email-verification.service.ts
-msgid "Welcome to Twenty: Please Confirm Your Email"
-msgstr "Welkom by Twenty: Bevestig Asseblief Jou E-pos"
+msgid "Welcome to Torse: Please Confirm Your Email"
+msgstr ""
 
 #. js-lingui-id: OHlJ1X
 #: src/engine/metadata-modules/page-layout-widget/utils/validate-widget-grid-position.util.ts

@@ -7878,10 +7878,10 @@ msgstr "Webhookia ei löytynyt."
 msgid "Wednesday"
 msgstr "Keskiviikko"
 
-#. js-lingui-id: TVkCrJ
+#. js-lingui-id: 9aezqc
 #: src/engine/core-modules/email-verification/services/email-verification.service.ts
-msgid "Welcome to Twenty: Please Confirm Your Email"
-msgstr "Tervetuloa Twentyyn: Vahvista sähköpostisi"
+msgid "Welcome to Torse: Please Confirm Your Email"
+msgstr ""
 
 #. js-lingui-id: OHlJ1X
 #: src/engine/metadata-modules/page-layout-widget/utils/validate-widget-grid-position.util.ts

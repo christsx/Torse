@@ -24,6 +24,18 @@ rawDataSource
       'create extension "unaccent"',
     );
 
+    // Supabase installs uuid-ossp in the extensions schema; Twenty expects public.uuid_generate_v4()
+    await performQuery(
+      `CREATE OR REPLACE FUNCTION public.uuid_generate_v4()
+    RETURNS uuid
+    LANGUAGE sql
+    VOLATILE
+AS $$
+SELECT extensions.uuid_generate_v4()
+$$;`,
+      'create public uuid_generate_v4 wrapper for Supabase',
+    );
+
     await performQuery(
       `CREATE OR REPLACE FUNCTION public.unaccent_immutable(input text)
     RETURNS text

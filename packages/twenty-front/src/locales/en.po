@@ -2867,10 +2867,10 @@ msgstr "Bundled with {applicationName}"
 msgid "by {author}"
 msgstr "by {author}"
 
-#. js-lingui-id: 8Pfllj
+#. js-lingui-id: ntUPbd
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
-msgid "By using Twenty, you agree to the"
-msgstr "By using Twenty, you agree to the"
+msgid "By using Torse, you agree to the"
+msgstr "By using Torse, you agree to the"
 
 #. js-lingui-id: Yx41df
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
@@ -3274,10 +3274,10 @@ msgstr "Check your Emails"
 msgid "Check your inbox to verify your new email address."
 msgstr "Check your inbox to verify your new email address."
 
-#. js-lingui-id: SxwQE8
+#. js-lingui-id: zfWTf6
 #: src/modules/settings/billing/hooks/useHandleCheckoutSession.ts
-msgid "Checkout session error. Please retry or contact Twenty team"
-msgstr "Checkout session error. Please retry or contact Twenty team"
+msgid "Checkout session error. Please retry or contact Torse team"
+msgstr "Checkout session error. Please retry or contact Torse team"
 
 #. js-lingui-id: SviKkE
 #: src/pages/settings/profile/appearance/components/LocalePicker.tsx
@@ -6552,10 +6552,10 @@ msgstr "Error while cancelling interval switching."
 msgid "Error while cancelling plan switching."
 msgstr "Error while cancelling plan switching."
 
-#. js-lingui-id: QmR+2U
+#. js-lingui-id: 8VHjh7
 #: src/modules/settings/billing/hooks/useEndSubscriptionTrialPeriod.ts
-msgid "Error while ending trial period. Please contact Twenty team."
-msgstr "Error while ending trial period. Please contact Twenty team."
+msgid "Error while ending trial period. Please contact Torse team."
+msgstr "Error while ending trial period. Please contact Torse team."
 
 #. js-lingui-id: 5g78zo
 #: src/pages/settings/members/SettingsWorkspaceMember.tsx
@@ -11774,10 +11774,10 @@ msgstr "Page layouts"
 msgid "Page Name"
 msgstr "Page Name"
 
-#. js-lingui-id: NRvxzv
+#. js-lingui-id: Nm2nCb
 #: src/pages/not-found/NotFound.tsx
-msgid "Page Not Found | Twenty"
-msgstr "Page Not Found | Twenty"
+msgid "Page Not Found | Torse"
+msgstr "Page Not Found | Torse"
 
 #. js-lingui-id: sF+Xp9
 #: src/pages/settings/security/event-logs/components/EventLogTableSelector.tsx
@@ -14948,10 +14948,10 @@ msgstr "Sync with Google"
 msgid "Sync with Outlook"
 msgstr "Sync with Outlook"
 
-#. js-lingui-id: +9x4tK
+#. js-lingui-id: uOpwU9
 #: src/pages/onboarding/SyncEmails.tsx
-msgid "Sync your Emails and Calendar with Twenty. Choose your privacy settings."
-msgstr "Sync your Emails and Calendar with Twenty. Choose your privacy settings."
+msgid "Sync your Emails and Calendar with Torse. Choose your privacy settings."
+msgstr "Sync your Emails and Calendar with Torse. Choose your privacy settings."
 
 #. js-lingui-id: N2FcBE
 #: src/modules/settings/accounts/components/SettingsAccountsConnectedAccountsRowRightContainer.tsx
@@ -15144,6 +15144,11 @@ msgstr "Text copied to clipboard"
 msgid "Text Editor"
 msgstr "Text Editor"
 
+#. js-lingui-id: Drb6pP
+#: src/pages/auth/SignInUp.tsx
+msgid "The AI-native CRM you can customize like software."
+msgstr "The AI-native CRM you can customize like software."
+
 #. js-lingui-id: oVH0Mt
 #: src/pages/settings/admin-panel/SettingsAdminNewAiProvider.tsx
 msgid "The API endpoint for your OpenAI-compatible provider"
@@ -15154,14 +15159,14 @@ msgstr "The API endpoint for your OpenAI-compatible provider"
 msgid "The AWS region for Bedrock"
 msgstr "The AWS region for Bedrock"
 
-#. js-lingui-id: HP7per
+#. js-lingui-id: 4V6DZS
 #: src/pages/settings/applications/utils/getStandardApplicationDescription.ts
 msgid ""
-"The base data model every Twenty workspace runs on.\n"
+"The base data model every Torse workspace runs on.\n"
 "\n"
 "#### What \"foundation\" means\n"
 "\n"
-"Every Twenty workspace starts with this set of objects. They define the shape of your CRM, including relationships, activity, and reporting. Everything else, including marketplace apps, AI agents, and custom objects, plugs into them.\n"
+"Every Torse workspace starts with this set of objects. They define the shape of your CRM, including relationships, activity, and reporting. Everything else, including marketplace apps, AI agents, and custom objects, plugs into them.\n"
 "\n"
 "#### Included objects\n"
 "- **People & Companies**: contact and account records\n"
@@ -15169,30 +15174,30 @@ msgid ""
 "- **Notes & Tasks**: activity and follow-ups\n"
 "- **Workflows & Dashboards**: automation and reporting\n"
 "\n"
-"Remove this app and the rest of Twenty has nothing to hang off.\n"
+"Remove this app and the rest of Torse has nothing to hang off.\n"
 "\n"
 "#### Build your own app\n"
 "\n"
-"Extend Twenty with your own objects, fields, logic functions, or AI skills. Scaffold a new app in one command:\n"
+"Extend Torse with your own objects, fields, logic functions, or AI skills. Scaffold a new app in one command:\n"
 "\n"
 "```bash\n"
-"npx create-twenty-app@latest my-twenty-app\n"
+"npx create-twenty-app@latest my-torse-app\n"
 "```\n"
 "\n"
 "Then inside the folder:\n"
 "\n"
 "```bash\n"
-"cd my-twenty-app\n"
+"cd my-torse-app\n"
 "yarn twenty dev\n"
 "```\n"
 "\n"
 "See the [Getting Started guide](https://twenty.com/developers/extend/apps/getting-started) for the full walkthrough, and [Building Apps](https://twenty.com/developers/extend/apps/building) for the `defineApplication` / `defineEntity` APIs."
 msgstr ""
-"The base data model every Twenty workspace runs on.\n"
+"The base data model every Torse workspace runs on.\n"
 "\n"
 "#### What \"foundation\" means\n"
 "\n"
-"Every Twenty workspace starts with this set of objects. They define the shape of your CRM, including relationships, activity, and reporting. Everything else, including marketplace apps, AI agents, and custom objects, plugs into them.\n"
+"Every Torse workspace starts with this set of objects. They define the shape of your CRM, including relationships, activity, and reporting. Everything else, including marketplace apps, AI agents, and custom objects, plugs into them.\n"
 "\n"
 "#### Included objects\n"
 "- **People & Companies**: contact and account records\n"
@@ -15200,20 +15205,20 @@ msgstr ""
 "- **Notes & Tasks**: activity and follow-ups\n"
 "- **Workflows & Dashboards**: automation and reporting\n"
 "\n"
-"Remove this app and the rest of Twenty has nothing to hang off.\n"
+"Remove this app and the rest of Torse has nothing to hang off.\n"
 "\n"
 "#### Build your own app\n"
 "\n"
-"Extend Twenty with your own objects, fields, logic functions, or AI skills. Scaffold a new app in one command:\n"
+"Extend Torse with your own objects, fields, logic functions, or AI skills. Scaffold a new app in one command:\n"
 "\n"
 "```bash\n"
-"npx create-twenty-app@latest my-twenty-app\n"
+"npx create-twenty-app@latest my-torse-app\n"
 "```\n"
 "\n"
 "Then inside the folder:\n"
 "\n"
 "```bash\n"
-"cd my-twenty-app\n"
+"cd my-torse-app\n"
 "yarn twenty dev\n"
 "```\n"
 "\n"
@@ -15823,6 +15828,11 @@ msgstr "Top 10 workspaces by number of users"
 msgid "Top Workspaces"
 msgstr "Top Workspaces"
 
+#. js-lingui-id: jALvYD
+#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
+msgid "Torse fields"
+msgstr "Torse fields"
+
 #. js-lingui-id: 72c5Qo
 #: src/modules/page-layout/widgets/graph/graph-widget-pie-chart/hooks/usePieChartCenterMetricData.ts
 msgid "Total"
@@ -16013,11 +16023,6 @@ msgstr "Turn Not Found"
 #: src/modules/settings/data-model/fields/forms/select/components/SettingsDataModelFieldSelectFormOptionRow.tsx
 msgid "Turquoise"
 msgstr "Turquoise"
-
-#. js-lingui-id: JnaRPe
-#: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
-msgid "Twenty fields"
-msgstr "Twenty fields"
 
 #. js-lingui-id: YIjS4q
 #: src/modules/ai/components/SettingsAgentModelCapabilities.tsx
@@ -17188,10 +17193,10 @@ msgstr "weeks"
 msgid "Weight"
 msgstr "Weight"
 
-#. js-lingui-id: nTuObL
+#. js-lingui-id: aabRQ3
 #: src/pages/auth/SignInUp.tsx
-msgid "Welcome to Twenty"
-msgstr "Welcome to Twenty"
+msgid "Welcome to Torse"
+msgstr "Welcome to Torse"
 
 #. js-lingui-id: t8ZvkC
 #: src/pages/auth/SignInUp.tsx

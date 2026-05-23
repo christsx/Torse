@@ -7884,10 +7884,10 @@ msgstr "Webhook hittades inte."
 msgid "Wednesday"
 msgstr "Onsdag"
 
-#. js-lingui-id: TVkCrJ
+#. js-lingui-id: 9aezqc
 #: src/engine/core-modules/email-verification/services/email-verification.service.ts
-msgid "Welcome to Twenty: Please Confirm Your Email"
-msgstr "Välkommen till Twenty: Bekräfta din e-post"
+msgid "Welcome to Torse: Please Confirm Your Email"
+msgstr ""
 
 #. js-lingui-id: OHlJ1X
 #: src/engine/metadata-modules/page-layout-widget/utils/validate-widget-grid-position.util.ts

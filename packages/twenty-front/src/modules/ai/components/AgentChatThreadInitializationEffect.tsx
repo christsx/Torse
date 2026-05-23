@@ -1,4 +1,4 @@
-import { useAtomValue, useStore } from 'jotai';
+import { useStore } from 'jotai';
 import { useEffect } from 'react';
 import { isDefined, isValidUuid } from 'twenty-shared/utils';
 
@@ -16,7 +16,6 @@ import { hasInitializedAgentChatThreadsState } from '@/ai/states/hasInitializedA
 import { hasTriggeredCreateForDraftState } from '@/ai/states/hasTriggeredCreateForDraftState';
 import { sortChatThreadsByLastActivityDesc } from '@/ai/utils/sortChatThreadsByLastActivityDesc';
 import { useUpdateMetadataStoreDraft } from '@/metadata-store/hooks/useUpdateMetadataStoreDraft';
-import { metadataStoreState } from '@/metadata-store/states/metadataStoreState';
 import { useHasPermissionFlag } from '@/settings/roles/hooks/useHasPermissionFlag';
 import { useAtomComponentFamilyStateCallbackState } from '@/ui/utilities/state/jotai/hooks/useAtomComponentFamilyStateCallbackState';
 import { useAtomState } from '@/ui/utilities/state/jotai/hooks/useAtomState';
@@ -41,6 +40,9 @@ export const AgentChatThreadInitializationEffect = () => {
   const setAgentChatThreadsLoading = useSetAtomState(
     agentChatThreadsLoadingState,
   );
+  const agentChatThreadsLoading = useAtomStateValue(
+    agentChatThreadsLoadingState,
+  );
   const threadTitleFamilyCallback = useAtomComponentFamilyStateCallbackState(
     currentAiChatThreadTitleComponentFamilyState,
   );
@@ -51,16 +53,15 @@ export const AgentChatThreadInitializationEffect = () => {
   const agentChatVisibleThreads = useAtomStateValue(
     agentChatVisibleThreadsSelector,
   );
-  const storeEntry = useAtomValue(
-    metadataStoreState.atomFamily('agentChatThreads'),
-  );
   const [hasInitializedAgentChatThreads, setHasInitializedAgentChatThreads] =
     useAtomState(hasInitializedAgentChatThreadsState);
 
   useEffect(() => {
-    if (storeEntry.status !== 'empty' || !hasAiSettingsPermission) {
+    if (!hasAiSettingsPermission) {
       return;
     }
+
+    setAgentChatThreadsLoading(true);
 
     client
       .query({
@@ -74,20 +75,32 @@ export const AgentChatThreadInitializationEffect = () => {
 
         replaceDraft('agentChatThreads', result.data.chatThreads);
         applyChanges();
+
+        const activeThreadId = store.get(currentAiChatThreadState.atom);
+        const serverThreadIds = new Set(
+          result.data.chatThreads.map((thread) => thread.id),
+        );
+
+        if (
+          isDefined(activeThreadId) &&
+          isValidUuid(activeThreadId) &&
+          !serverThreadIds.has(activeThreadId)
+        ) {
+          setCurrentAiChatThread(AGENT_CHAT_NEW_THREAD_DRAFT_KEY);
+        }
+      })
+      .finally(() => {
+        setAgentChatThreadsLoading(false);
       });
   }, [
-    storeEntry.status,
     hasAiSettingsPermission,
     client,
     replaceDraft,
     applyChanges,
+    setAgentChatThreadsLoading,
+    store,
+    setCurrentAiChatThread,
   ]);
-
-  useEffect(() => {
-    setAgentChatThreadsLoading(
-      storeEntry.status === 'empty' && hasAiSettingsPermission,
-    );
-  }, [storeEntry.status, hasAiSettingsPermission, setAgentChatThreadsLoading]);
 
   useEffect(() => {
     if (
@@ -97,7 +110,11 @@ export const AgentChatThreadInitializationEffect = () => {
       return;
     }
 
-    if (storeEntry.status === 'empty' && hasAiSettingsPermission) {
+    if (!hasAiSettingsPermission) {
+      return;
+    }
+
+    if (agentChatThreadsLoading) {
       return;
     }
 
@@ -154,8 +171,8 @@ export const AgentChatThreadInitializationEffect = () => {
     currentAiChatThread,
     hasAiSettingsPermission,
     hasInitializedAgentChatThreads,
+    agentChatThreadsLoading,
     setHasInitializedAgentChatThreads,
-    storeEntry.status,
     setCurrentAiChatThread,
     setAgentChatInput,
     store,

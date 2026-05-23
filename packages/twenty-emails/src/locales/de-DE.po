@@ -20,6 +20,61 @@ msgstr ""
 
 #. js-lingui-explicit-id
 #: src/emails/warn-suspended-workspace.email.tsx
+msgid "If you wish to continue using Torse, please update your subscription within the next {remainingDays} {dayOrDays}."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/emails/send-invite-link.email.tsx
+msgid "Join your team on Torse"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/emails/password-update-notify.email.tsx
+msgid "Connect to Torse"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/emails/clean-suspended-workspace.email.tsx
+msgid "If you wish to use Torse again, you can create a new workspace."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/WhatIsTwenty.tsx
+msgid "What is Torse?"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/WhatIsTwenty.tsx
+msgid "The AI-native CRM you can customize like software."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
+msgid "Visit Torse's website"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
+msgid "Visit Torse's GitHub repository"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
+msgid "Read Torse's user guide"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
+msgid "Visit Torse's developer documentation"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/components/Footer.tsx
+msgid "Torse"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: src/emails/warn-suspended-workspace.email.tsx
 msgid "Suspended Workspace"
 msgstr "Ausgesetzter Arbeitsbereich"
 
@@ -49,11 +104,6 @@ msgstr "Der Workspace wird in {remainingDays} {dayOrDays} deaktiviert, und alle 
 
 #. js-lingui-explicit-id
 #: src/emails/warn-suspended-workspace.email.tsx
-msgid "If you wish to continue using Twenty, please update your subscription within the next {remainingDays} {dayOrDays}."
-msgstr "Wenn Sie Twenty weiterhin nutzen möchten, aktualisieren Sie bitte Ihr Abonnement innerhalb der nächsten {remainingDays} {dayOrDays}."
-
-#. js-lingui-explicit-id
-#: src/emails/warn-suspended-workspace.email.tsx
 msgid "Update your subscription"
 msgstr "Aktualisieren Sie Ihr Abonnement"
 
@@ -72,11 +122,6 @@ msgstr "{senderName} (<0>{senderEmail}</0>): Bitte validieren Sie diese Domain, 
 #: src/emails/test.email.tsx
 msgid "Test email"
 msgstr "Test E-Mail"
-
-#. js-lingui-explicit-id
-#: src/emails/send-invite-link.email.tsx
-msgid "Join your team on Twenty"
-msgstr "Treten Sie Ihrem Team auf Twenty bei"
 
 #. js-lingui-explicit-id
 #: src/emails/send-invite-link.email.tsx
@@ -124,11 +169,6 @@ msgid "If you did not initiate this change, please contact your workspace owner 
 msgstr "Wenn Sie diese Änderung nicht veranlasst haben, kontaktieren Sie bitte umgehend den Eigentümer Ihres Workspaces."
 
 #. js-lingui-explicit-id
-#: src/emails/password-update-notify.email.tsx
-msgid "Connect to Twenty"
-msgstr "Mit Twenty verbinden"
-
-#. js-lingui-explicit-id
 #: src/emails/password-reset-link.email.tsx
 msgid "Reset your password 🗝"
 msgstr "Setzen Sie Ihr Passwort zurück 🗝"
@@ -170,23 +210,8 @@ msgstr "Alle Daten in diesem Workspace wurden dauerhaft gelöscht."
 
 #. js-lingui-explicit-id
 #: src/emails/clean-suspended-workspace.email.tsx
-msgid "If you wish to use Twenty again, you can create a new workspace."
-msgstr "Wenn Sie Twenty erneut nutzen möchten, können Sie einen neuen Workspace erstellen."
-
-#. js-lingui-explicit-id
-#: src/emails/clean-suspended-workspace.email.tsx
 msgid "Create a new workspace"
 msgstr "Erstellen Sie einen neuen Arbeitsbereich"
-
-#. js-lingui-explicit-id
-#: src/components/WhatIsTwenty.tsx
-msgid "What is Twenty?"
-msgstr "Was ist Twenty?"
-
-#. js-lingui-explicit-id
-#: src/components/WhatIsTwenty.tsx
-msgid "It's a CRM, a software to help businesses manage their customer data and relationships efficiently."
-msgstr "Es ist ein CRM, eine Software, die Unternehmen hilft, ihre Kundendaten und -beziehungen effizient zu verwalten."
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx
@@ -195,18 +220,8 @@ msgstr "Website"
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx
-msgid "Visit Twenty's website"
-msgstr "Besuchen Sie die Twenty-Website"
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
 msgid "Github"
 msgstr "GitHub"
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
-msgid "Visit Twenty's GitHub repository"
-msgstr "Besuchen Sie das GitHub-Repository von Twenty"
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx
@@ -215,23 +230,8 @@ msgstr "Benutzerhandbuch"
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx
-msgid "Read Twenty's user guide"
-msgstr "Lesen Sie das Benutzerhandbuch von Twenty"
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
 msgid "Developers"
 msgstr "Entwickler"
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
-msgid "Visit Twenty's developer documentation"
-msgstr "Besuchen Sie die Entwicklerdokumentation von Twenty"
-
-#. js-lingui-explicit-id
-#: src/components/Footer.tsx
-msgid "Twenty.com, Public Benefit Corporation"
-msgstr "Twenty.com, Gemeinnützige Aktiengesellschaft"
 
 #. js-lingui-explicit-id
 #: src/components/Footer.tsx

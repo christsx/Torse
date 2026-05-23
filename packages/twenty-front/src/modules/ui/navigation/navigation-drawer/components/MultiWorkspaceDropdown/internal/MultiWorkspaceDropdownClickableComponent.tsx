@@ -5,8 +5,8 @@ import {
   StyledLabel,
   StyledLabelWrapper,
 } from '@/ui/navigation/navigation-drawer/components/MultiWorkspaceDropdown/internal/MultiWorkspacesDropdownStyles';
+import { PRODUCT_LOGO_PATH } from '~/constants/product-branding.constants';
 import { NavigationDrawerAnimatedCollapseWrapper } from '@/ui/navigation/navigation-drawer/components/NavigationDrawerAnimatedCollapseWrapper';
-import { DEFAULT_WORKSPACE_LOGO } from '@/ui/navigation/navigation-drawer/constants/DefaultWorkspaceLogo';
 import { isNavigationDrawerExpandedState } from '@/ui/navigation/states/isNavigationDrawerExpanded';
 import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomStateValue';
 import { useContext } from 'react';
@@ -34,7 +34,7 @@ export const MultiWorkspaceDropdownClickableComponent = ({
     >
       <Avatar
         placeholder={currentWorkspace?.displayName || ''}
-        avatarUrl={currentWorkspace?.logo ?? DEFAULT_WORKSPACE_LOGO}
+        avatarUrl={PRODUCT_LOGO_PATH}
       />
       <StyledLabelWrapper>
         <NavigationDrawerAnimatedCollapseWrapper>

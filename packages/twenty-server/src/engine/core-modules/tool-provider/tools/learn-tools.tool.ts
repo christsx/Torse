@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 import { type ToolRegistryService } from 'src/engine/core-modules/tool-provider/services/tool-registry.service';
 import { type ToolContext } from 'src/engine/core-modules/tool-provider/types/tool-context.type';
+import { sanitizeToolResponseForGemini } from 'src/engine/metadata-modules/ai/ai-chat/utils/sanitize-tool-response-for-gemini.util';
 
 export const LEARN_TOOLS_TOOL_NAME = 'learn_tools';
 
@@ -61,17 +62,17 @@ export const createLearnToolsTool = (
     const notFound = toolNames.filter((name) => !foundNames.has(name));
 
     if (notFound.length > 0) {
-      return {
+      return sanitizeToolResponseForGemini({
         tools: toolInfos,
         notFound,
         message: `Learned ${toolInfos.length} tool(s). Could not find: ${notFound.join(', ')}.`,
-      };
+      }) as LearnToolsResult;
     }
 
-    return {
+    return sanitizeToolResponseForGemini({
       tools: toolInfos,
       notFound: [],
-      message: `Learned ${toolInfos.length} tool(s): ${toolInfos.map((t) => t.name).join(', ')}.`,
-    };
+      message: `Learned ${toolInfos.length} tool(s): ${toolInfos.map((tool) => tool.name).join(', ')}.`,
+    }) as LearnToolsResult;
   },
 });

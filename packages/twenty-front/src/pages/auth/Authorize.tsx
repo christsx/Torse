@@ -295,7 +295,10 @@ export const Authorize = () => {
       <StyledCardWrapper>
         <StyledHeader>
           <StyledAppLogoTile>
-            <StyledAppLogo src="/images/integrations/twenty-logo.svg" alt="" />
+            <StyledAppLogo
+              src="/images/branding/torse-white-logo.png"
+              alt=""
+            />
           </StyledAppLogoTile>
           <StyledLinkIconContainer aria-hidden>
             <IconRefresh
